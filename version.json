@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "notes": "Primeira versão oficial: download em até 128 partes paralelas, retomada, painel de partes, tempo restante (ETA) e atualização automática.",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.0.0/DownloadManager.exe",
+  "sha256": "41d2d2fb939dade9e53930b5971c6afe384df64bf6934c31a409be3c40c22476"
+}
