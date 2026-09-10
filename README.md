@@ -110,6 +110,13 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.2.0** — novidades:
+  - Minimize para a **bandeja do sistema** (com pergunta antes de sair);
+  - **Histórico** dos downloads concluídos;
+  - **Continuação automática**: ao abrir o programa, os downloads incompletos continuam de onde pararam, na ordem da fila;
+  - Ao colar de novo um link que já estava pela metade, ele **mantém a pasta de destino** escolhida e retoma no ponto exato;
+  - Download interrompido ou com estado corrompido é **recuperado reconstruindo as partes** dos arquivos `.part`.
+
 - **v1.1.0** — correções e novas opções:
   - **Correção:** o 2º/3º download simultâneo também baixa em paralelo — se o servidor esconder o tamanho ou impedir a consulta inicial, o aplicativo **descobre o tamanho durante o próprio download** e sobe sozinho de 1 parte para paralelo (antes ficava preso em "1 parte" e "tamanho desconhecido");
   - Até **256 partes** por download;
