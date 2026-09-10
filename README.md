@@ -10,7 +10,7 @@ Um gerenciador de downloads para Windows, moderno, rápido e com tema escuro. Ba
 
 O objetivo é dar ao usuário o máximo de controle e velocidade no download de arquivos da internet, mesmo em servidores lentos ou instáveis. O aplicativo:
 
-- Divide o download em **até 128 partes paralelas**, acelerando arquivos grandes;
+- Divide o download em **até 256 partes paralelas**, acelerando arquivos grandes;
 - **Retoma sem perder o progresso** se você fechar o programa, pausar ou cair a internet;
 - Mostra **tempo restante (ETA)**, velocidade média e progresso de cada parte;
 - Permite **pausar, continuar, cancelar e remover** downloads;
@@ -53,9 +53,10 @@ Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa ca
 
    - Pasta de destino final;
    - Pasta temporária (onde as partes ficam durante o download);
-   - **Número de partes por download** (1 a 128);
+   - **Número de partes por download** (1 a 256);
    - **Downloads simultâneos**;
-   - **Tentativas** ao ocorrer erro de conexão.
+   - **Tentativas** ao ocorrer erro de conexão;
+   - **Iniciar com o Windows** — abre o programa junto com o sistema (marque/desmarque quando quiser).
 
 > A pasta pode ser escolhida a qualquer momento, antes de baixar.
 
@@ -63,7 +64,9 @@ Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa ca
 
 ## Atualizações automáticas
 
-O aplicativo **já vem preparado para receber atualizações sozinho**: ao iniciar, ele consulta o repositório (arquivo `version.json`); se houver uma versão mais recente, ele pergunta se você quer atualizar, baixa, **substitui o programa** e reabre automaticamente. A versão atual fica visível no rodapé da janela (ex.: `v1.0.0`), e muda sozinha ao atualizar.
+O aplicativo **já vem preparado para receber atualizações sozinho**: ao iniciar, ele consulta o repositório (arquivo `version.json`). Se houver versões mais recentes, uma janela aparece listando **cada versão disponível** com as notas do que mudou — e **você escolhe** se quer atualizar, **para qual versão** quer ir, ou simplesmente continuar na versão atual. Basta fechar e reabrir o programa para ver as opções novamente.
+
+A versão atual fica visível no rodapé da janela (ex.: `v1.1.0`). Todas as versões lançadas ficam disponíveis para sempre na seção **Releases** do repositório no GitHub.
 
 ---
 
@@ -88,6 +91,8 @@ Este projeto foi desenvolvido por **Marcos Vitor**, com o auxílio de **intelig�
 
 O executável **não possui certificado digital** assinado pela Microsoft. Por causa disso, é **normal** que o Windows SmartScreen ou algum antivírus mostre um alerta acusando "vírus" ou "arquivo desconhecido". **Isso é um falso positivo** e acontece com praticamente todo programa sem certificado pago. O aplicativo é seguro.
 
+Ao **baixar pelo navegador** (Edge, Chrome ou Firefox), também pode aparecer um aviso dizendo que o arquivo "não é seguro" ou "não é segurável". Nesse caso, clique em **Manter** (opção *Keep*) — é o nosso executável oficial.
+
 Para executar mesmo assim:
 
 1. Abra o alerta do SmartScreen;
@@ -104,6 +109,13 @@ Para executar mesmo assim:
 ---
 
 ## Versões
+
+- **v1.1.0** — correções e novas opções:
+  - **Correção:** o 2º/3º download simultâneo também baixa em paralelo — se o servidor esconder o tamanho ou impedir a consulta inicial, o aplicativo **descobre o tamanho durante o próprio download** e sobe sozinho de 1 parte para paralelo (antes ficava preso em "1 parte" e "tamanho desconhecido");
+  - Até **256 partes** por download;
+  - **Fila por ordem de chegada** quando o limite de downloads simultâneos é atingido — quando libera, continua na ordem;
+  - Opção **Iniciar com o Windows** nas configurações;
+  - **Escolha de versão** na atualização: você decide se quer atualizar e para qual versão, ou ficar na atual.
 
 - **v1.0.0** — primeira versão oficial:
   - Download em até 128 partes paralelas;

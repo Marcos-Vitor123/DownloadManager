@@ -1,6 +1,20 @@
 {
-  "version": "1.0.0",
-  "notes": "Primeira versão oficial: download em até 128 partes paralelas, retomada, painel de partes, tempo restante (ETA) e atualização automática.",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.0.0/DownloadManager.exe",
-  "sha256": "41d2d2fb939dade9e53930b5971c6afe384df64bf6934c31a409be3c40c22476"
+  "version": "1.1.0",
+  "notes": "Correção: segundo download em paralelo agora descobre tamanho/suporte a partes durante o próprio download e sobe sozinho de 1 parte para paralelo. Até 256 partes por download, fila por ordem de chegada e opção de iniciar com o Windows.",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.1.0/DownloadManager.exe",
+  "sha256": "2df79120745a510675dd0d28f8f2f50c8803ef4c6639c2ca9382b377a8e044f2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "notes": "Primeira versão oficial: download em até 128 partes paralelas, retomada, painel de partes, tempo restante (ETA) e atualização automática.",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.0.0/DownloadManager.exe",
+      "sha256": "41d2d2fb939dade9e53930b5971c6afe384df64bf6934c31a409be3c40c22476"
+    },
+    {
+      "version": "1.1.0",
+      "notes": "Correção: segundo download em paralelo agora descobre tamanho/suporte a partes durante o próprio download e sobe sozinho de 1 parte para paralelo. Até 256 partes por download, fila por ordem de chegada e opção de iniciar com o Windows.",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.1.0/DownloadManager.exe",
+      "sha256": "2df79120745a510675dd0d28f8f2f50c8803ef4c6639c2ca9382b377a8e044f2"
+    }
+  ]
 }
