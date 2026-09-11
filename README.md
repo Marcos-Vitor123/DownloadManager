@@ -47,7 +47,7 @@ Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa ca
 4. Acompanhe o progresso: velocidade, tempo restante e o painel de partes.
 5. Use os botões do item:
    - **Pausar / Continuar** — pausa sem perder o progresso;
-   - **X (Cancelar)** — para o download e o remove da lista;
+   - **X (Remover)** — perguntamos se você quer **remover só da lista** (mantendo os arquivos) ou **excluir tudo** do disco e da lista;
    - **Abrir pasta** — mostra o arquivo baixado;
 6. Clique no **engrenagem** para configurar:
 
@@ -108,6 +108,12 @@ Para executar mesmo assim:
 ---
 
 ## Versões
+
+- **v1.2.6** — progresso visível na junção + X de remover com confirmação em todos os estados:
+  - **Junção com progresso:** ao juntar as partes, a barra de progresso agora **acompanha a montagem do arquivo** (mostra o quanto já foi juntado, o percentual e a velocidade) até chegar em **"Concluído"**;
+  - **X de remover em todos os estados:** baixando, juntando, pausado, em erro ou concluído — ao clicar no X, o programa **pergunta** se você quer **remover só da lista** (mantendo os arquivos no disco) ou **excluir tudo, tanto da lista quanto do disco**;
+  - A junção continua podendo ser pausada/cancelada sem deixar arquivo parcial.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.6)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.6/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
 - **v1.2.5** — downloads já iniciados migram sozinhos + junção sem travar + velocidade mais estável:
   - **Migração automática:** ao abrir o aplicativo, a pasta temporária de cada download incompleto antigo é **movida para a pasta de destino escolhida** (cada um com a sua subpasta `.dm-temp-…`, que some ao terminar) e o download **continua de onde parou**;

@@ -1,8 +1,8 @@
 {
-  "version": "1.2.5",
-  "notes": "Downloads ja iniciados migram sozinhos para a novo formato: ao abrir, a pasta temporaria de cada download incompleto antigo e movida para a pasta de destino escolhida (subpasta .dm-temp propria, que some ao terminar) e o download continua de onde parou. A juncao agora pode ser pausada/cancelada/desligada no meio sem travar e sem deixar arquivo parcial (retoma a juncao depois). A velocidade ficou mais estavel: as reconexoes apos queda de conexao agora sao escalonadas com pequena variacao de tempo, evitando que todas as partes caiam para 0 ao mesmo tempo em servidores que limitam conexoes.",
-  "sha256": "7354409B3A62195BD35EF16551BA238C792C9EC167A21E5AB369E25BC6CB19EB",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.5/DownloadManager.exe",
+  "version": "1.2.6",
+  "notes": "Novo: ao juntar as partes, a barra de progresso e a velocidade agora acompanham a montagem do arquivo (mostra o quanto ja foi juntado e o percentual ate chegar em 'Concluido'). Novo: o X de remover agora existe em todos os estados (baixando, juntando, concluido, erro, pausado) - ao clicar, pergunta se voce quer remover so da lista mantendo os arquivos ou excluir tudo, tanto da lista quanto do disco. Juncao pausavel em qualquer momento sem deixar arquivo parcial.",
+  "sha256": "D848C2F990723E5F139BB8BE32992D12AE5AB1C139AF0B3B22D52A93CB6CDF19",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.6/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -51,6 +51,12 @@
       "notes": "Downloads ja iniciados migram sozinhos para a novo formato: ao abrir, a pasta temporaria de cada download incompleto antigo e movida para a pasta de destino escolhida (subpasta .dm-temp propria, que some ao terminar) e o download continua de onde parou. A juncao agora pode ser pausada/cancelada/desligada no meio sem travar e sem deixar arquivo parcial (retoma a juncao depois). A velocidade ficou mais estavel: as reconexoes apos queda de conexao agora sao escalonadas com pequena variacao de tempo, evitando que todas as partes caiam para 0 ao mesmo tempo em servidores que limitam conexoes.",
       "sha256": "7354409B3A62195BD35EF16551BA238C792C9EC167A21E5AB369E25BC6CB19EB",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.5/DownloadManager.exe"
+    },
+    {
+      "version": "1.2.6",
+      "notes": "Novo: ao juntar as partes, a barra de progresso e a velocidade agora acompanham a montagem do arquivo (mostra o quanto ja foi juntado e o percentual ate chegar em 'Concluido'). Novo: o X de remover agora existe em todos os estados (baixando, juntando, concluido, erro, pausado) - ao clicar, pergunta se voce quer remover so da lista mantendo os arquivos ou excluir tudo, tanto da lista quanto do disco. Juncao pausavel em qualquer momento sem deixar arquivo parcial.",
+      "sha256": "D848C2F990723E5F139BB8BE32992D12AE5AB1C139AF0B3B22D52A93CB6CDF19",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.6/DownloadManager.exe"
     }
   ]
 }
