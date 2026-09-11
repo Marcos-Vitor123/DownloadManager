@@ -31,7 +31,7 @@ O **Download Manager** combina o melhor dos gerenciadores de download mais conhe
 | **JDownloader** | Facilidade de uso: colar o link e baixar, com estrutura de pastas e gerenciamento da lista. |
 | **Torrent (µTorrent/qBittorrent)** | O arquivo é dividido em **partes** baixadas em paralelo e montado no final — e você pode **continuar de onde parou** mesmo após fechar o programa ou reiniciar o PC. |
 
-Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa cada parte em uma conexão simultânea e, ao final, **monta o arquivo** na pasta escolhida. Se um servidor limita uma única conexão, ele se adapta e funciona igualmente bem. Tudo isso validado: ao interromper no meio, fechar e abrir no outro dia, o download **continua exatamente de onde parou** e o arquivo final é idêntico (integridade verificada).
+Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa cada parte em uma conexão simultânea e **grava cada parte diretamente no arquivo final**, na posição certa, dentro da pasta escolhida — quando a última parte termina, o arquivo **já está pronto, sem fase de junção** (técnica estilo torrent, com a vantagem de não depender de seeds). Em downloads **iniciados em versões antigas**, que já tinham partes em pastas temporárias, o programa ainda **monta o arquivo no final**. Se um servidor limita uma única conexão, ele se adapta e funciona igualmente bem. Tudo isso validado: ao interromper no meio, fechar e abrir no outro dia, o download **continua exatamente de onde parou** e o arquivo final é idêntico (integridade verificada).
 
 > **Importante:** nem todos os sites/servidores aceitam baixar em várias partes ao mesmo tempo. Quando o servidor permite apenas **uma** conexão (caso comum em sites de hospedagem direta, como os que o JDownloader também baixa com 1 parte), o aplicativo percebe sozinho e baixa normalmente com **1 parte**. Se aparecer apenas "1 parte" baixando, **não é bug** — é o comportamento correto para funcionar naquele site; em sites que aceitam múltiplas conexões, as partes paralelas aparecem normalmente.
 
@@ -108,6 +108,14 @@ Para executar mesmo assim:
 ---
 
 ## Versões
+
+- **v1.3.0** — técnica estilo torrent: sem mais junção no final:
+  - **Cada parte grava direto no arquivo final**, na posição exata daquela parte, já dentro da pasta escolhida — o arquivo vai **aparecendo preenchido** enquanto baixa (é assim que funciona o torrent);
+  - **Acabou a fase "Juntando partes"**: quando a última parte termina, o arquivo **já está pronto** e o item vai direto para **"Concluído"** — sem cópia extra no final;
+  - Fechou no meio, reabriu? **continua de onde parou**, sem juntar nada depois;
+  - Downloads **iniciados antes** desta versão (que já tinham partes em pastas temporárias) continuam no formato antigo e **juntam as partes no final**, como até agora;
+  - Tudo isso junto com o que já tínhamos: download em até 256 partes paralelas, retomada exata, independe de seeds.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.0)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.0/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
 - **v1.2.6** — progresso visível na junção + X de remover com confirmação em todos os estados:
   - **Junção com progresso:** ao juntar as partes, a barra de progresso agora **acompanha a montagem do arquivo** (mostra o quanto já foi juntado, o percentual e a velocidade) até chegar em **"Concluído"**;
