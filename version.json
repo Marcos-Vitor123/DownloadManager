@@ -1,8 +1,8 @@
 {
-  "version": "1.2.3",
-  "notes": "Correcao de desempenho geral: os downloads agora rodam totalmente fora da tela principal, o salvamento do progresso e do historico deixou de ser feito na thread da interface (nao trava mais cliques, configuracoes, bandeja ou fechamento), a lista de downloads ficou virtualizada e as informacoes da tela sao atualizadas 1x por segundo em vez de 4x.",
-  "sha256": "1597476068fb037d8b0517adb22054042c833ccb605dbac60101cc3b778acc2c",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.3/DownloadManager.exe",
+  "version": "1.2.4",
+  "notes": "Nova: a pasta temporaria agora acompanha o local de destino de cada download - se voce escolher outra pasta ao baixar, as partes sao montadas la mesmo (cada download usa a propria subpasta temporaria, que some ao terminar). Removida a opcao de pasta temporaria das configuracoes. Velocidade maxima ate o fim: quando uma parte termina, o restante e redistribuido entre as conexoes ativas, acelerando a cada parte concluida. Ao juntar as partes, o item mostra 'Concluido'.",
+  "sha256": "94B2CC85EED2FFE3FA6240243BDE6B85B43A911ED3672D6F6336994558AE8F8A",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.4/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -39,6 +39,12 @@
       "notes": "Correcao de desempenho geral: os downloads agora rodam totalmente fora da tela principal, o salvamento do progresso e do historico deixou de ser feito na thread da interface (nao trava mais cliques, configuracoes, bandeja ou fechamento), a lista de downloads ficou virtualizada e as informacoes da tela sao atualizadas 1x por segundo em vez de 4x.",
       "sha256": "1597476068fb037d8b0517adb22054042c833ccb605dbac60101cc3b778acc2c",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.3/DownloadManager.exe"
+    },
+    {
+      "version": "1.2.4",
+      "notes": "Nova: a pasta temporaria agora acompanha o local de destino de cada download - se voce escolher outra pasta ao baixar, as partes sao montadas la mesmo (cada download usa a propria subpasta temporaria, que some ao terminar). Removida a opcao de pasta temporaria das configuracoes. Velocidade maxima ate o fim: quando uma parte termina, o restante e redistribuido entre as conexoes ativas, acelerando a cada parte concluida. Ao juntar as partes, o item mostra 'Concluido'.",
+      "sha256": "94B2CC85EED2FFE3FA6240243BDE6B85B43A911ED3672D6F6336994558AE8F8A",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.4/DownloadManager.exe"
     }
   ]
 }

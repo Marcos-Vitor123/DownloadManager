@@ -51,8 +51,7 @@ Na prática: o programa divide o arquivo em segmentos (ex.: 64 partes), baixa ca
    - **Abrir pasta** — mostra o arquivo baixado;
 6. Clique no **engrenagem** para configurar:
 
-   - Pasta de destino final;
-   - Pasta temporária (onde as partes ficam durante o download);
+   - Pasta de destino final (as partes ficam numa subpasta temporária própria dentro dela e são removidas ao terminar);
    - **Número de partes por download** (1 a 256);
    - **Downloads simultâneos**;
    - **Tentativas** ao ocorrer erro de conexão;
@@ -109,6 +108,12 @@ Para executar mesmo assim:
 ---
 
 ## Versões
+
+- **v1.2.4** — a pasta temporária agora acompanha o destino e a velocidade fica no máximo até o fim:
+  - **Pasta temporária dentro do destino:** ao escolher outra pasta ao baixar, as partes são montadas **na própria pasta escolhida** (cada download usa a sua subpasta temporária separada, ex.: `.dm-temp-…`, que some assim que o arquivo fica pronto). Removida a opção de pasta temporária das configurações;
+  - **Velocidade máxima até o fim:** quando uma parte termina, o trabalho restante é **redistribuído entre as conexões ativas** — a velocidade sobe conforme as partes concluem, até a última;
+  - Ao terminar de baixar e juntar as partes, o item fica **"Concluído"** e a subpasta temporária é removida, deixando só o arquivo final no local do download.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.4)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.4/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
 - **v1.2.3** — correção de desempenho geral (resposta aos cliques):
   - Os downloads agora rodam **totalmente fora da janela principal** — antes cada etapa voltava para a tela (inclusive a montagem do arquivo), o que fazia o programa travar e demorar a responder cliques, configurações, bandeja e até fechar;
