@@ -113,6 +113,7 @@ Para executar mesmo assim:
 - **v1.2.1** — correção de desempenho:
   - **Painel de partes virtualizado:** ao expandir um download, o programa desenha **apenas as partes visíveis** — antes criava as 256 de uma vez, o que causava a trava ao clicar;
   - **Progresso das partes a 1×/s:** em vez de atualizar tudo a cada 250 ms, agora atualiza 1 vez por segundo, mantendo a fluidez sem pesar na interface.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.1)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.1/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
 - **v1.2.0** — novidades:
   - Minimize para a **bandeja do sistema** (com pergunta antes de sair);
