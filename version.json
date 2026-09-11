@@ -1,8 +1,8 @@
 {
-  "version": "1.3.0",
-  "notes": "Grande novidade - tecnica estilo torrent: os novos downloads agora gravam cada parte DIRETO no arquivo final, na posicao exata daquela parte, ja dentro da pasta escolhida (o arquivo vai aparecendo preenchido). Acabou a fase de 'Juntando partes' e a copia extra no final: quando a ultima parte termina, o arquivo ja esta pronto e o item vai direto para 'Concluido'. Se fechar no meio, reabre e continua de onde parou, sem copiar nada de novo. Downloads iniciados antes desta versao continuam no formato antigo (juntam as partes no final, como ate agora).",
-  "sha256": "B2A510531A80C352FA7181D6603F1F2E1CAD9B600C51667EE1FB0E4E150478FB",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.0/DownloadManager.exe",
+  "version": "1.3.1",
+  "notes": "Novo: antes de iniciar um download com tamanho conhecido, o programa mostra quanto espaco o arquivo precisa e quanto esta livre no disco escolhido - voce confirma antes de comecar. Se nao houver espaco suficiente, ele avisa quanto falta e te orienta a liberar o disco (com botao para reavaliar o espaco) ou baixar mesmo assim. O arquivo final so passa a ser reservado no disco quando o download realmente comeca.",
+  "sha256": "442F423D7F26273439C657AE4745643DE9C2C26771132B3931D29FCFB14487C8",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.1/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -63,6 +63,12 @@
       "notes": "Grande novidade - tecnica estilo torrent: os novos downloads agora gravam cada parte DIRETO no arquivo final, na posicao exata daquela parte, ja dentro da pasta escolhida (o arquivo vai aparecendo preenchido). Acabou a fase de 'Juntando partes' e a copia extra no final: quando a ultima parte termina, o arquivo ja esta pronto e o item vai direto para 'Concluido'. Se fechar no meio, reabre e continua de onde parou, sem copiar nada de novo. Downloads iniciados antes desta versao continuam no formato antigo (juntam as partes no final, como ate agora).",
       "sha256": "B2A510531A80C352FA7181D6603F1F2E1CAD9B600C51667EE1FB0E4E150478FB",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.0/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.1",
+      "notes": "Novo: antes de iniciar um download com tamanho conhecido, o programa mostra quanto espaco o arquivo precisa e quanto esta livre no disco escolhido - voce confirma antes de comecar. Se nao houver espaco suficiente, ele avisa quanto falta e te orienta a liberar o disco (com botao para reavaliar o espaco) ou baixar mesmo assim. O arquivo final so passa a ser reservado no disco quando o download realmente comeca.",
+      "sha256": "442F423D7F26273439C657AE4745643DE9C2C26771132B3931D29FCFB14487C8",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.1/DownloadManager.exe"
     }
   ]
 }

@@ -109,6 +109,12 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.3.1** — espaço em disco antes de baixar:
+  - **Confirmação de espaço:** antes de iniciar um download com tamanho conhecido, o programa mostra **quanto espaço o arquivo precisa** e **quanto está livre** no disco escolhido — você confirma antes de começar;
+  - **Espaço insuficiente:** se não houver espaço suficiente, ele **avisa quanto falta** e orienta a **liberar espaço** (com botão **"Reavaliar espaço"** para verificar de novo) ou **"Baixar mesmo assim"**;
+  - O arquivo final só passa a ser **reservado no disco quando o download realmente começa** (se você cancelar na confirmação, nada é gravado).
+  - 📥 **[Baixar DownloadManager.exe (v1.3.1)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.1/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.3.0** — técnica estilo torrent: sem mais junção no final:
   - **Cada parte grava direto no arquivo final**, na posição exata daquela parte, já dentro da pasta escolhida — o arquivo vai **aparecendo preenchido** enquanto baixa (é assim que funciona o torrent);
   - **Acabou a fase "Juntando partes"**: quando a última parte termina, o arquivo **já está pronto** e o item vai direto para **"Concluído"** — sem cópia extra no final;
