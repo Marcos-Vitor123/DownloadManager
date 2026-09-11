@@ -1,8 +1,8 @@
 {
-  "version": "1.2.4",
-  "notes": "Nova: a pasta temporaria agora acompanha o local de destino de cada download - se voce escolher outra pasta ao baixar, as partes sao montadas la mesmo (cada download usa a propria subpasta temporaria, que some ao terminar). Removida a opcao de pasta temporaria das configuracoes. Velocidade maxima ate o fim: quando uma parte termina, o restante e redistribuido entre as conexoes ativas, acelerando a cada parte concluida. Ao juntar as partes, o item mostra 'Concluido'.",
-  "sha256": "94B2CC85EED2FFE3FA6240243BDE6B85B43A911ED3672D6F6336994558AE8F8A",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.4/DownloadManager.exe",
+  "version": "1.2.5",
+  "notes": "Downloads ja iniciados migram sozinhos para a novo formato: ao abrir, a pasta temporaria de cada download incompleto antigo e movida para a pasta de destino escolhida (subpasta .dm-temp propria, que some ao terminar) e o download continua de onde parou. A juncao agora pode ser pausada/cancelada/desligada no meio sem travar e sem deixar arquivo parcial (retoma a juncao depois). A velocidade ficou mais estavel: as reconexoes apos queda de conexao agora sao escalonadas com pequena variacao de tempo, evitando que todas as partes caiam para 0 ao mesmo tempo em servidores que limitam conexoes.",
+  "sha256": "7354409B3A62195BD35EF16551BA238C792C9EC167A21E5AB369E25BC6CB19EB",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.5/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -45,6 +45,12 @@
       "notes": "Nova: a pasta temporaria agora acompanha o local de destino de cada download - se voce escolher outra pasta ao baixar, as partes sao montadas la mesmo (cada download usa a propria subpasta temporaria, que some ao terminar). Removida a opcao de pasta temporaria das configuracoes. Velocidade maxima ate o fim: quando uma parte termina, o restante e redistribuido entre as conexoes ativas, acelerando a cada parte concluida. Ao juntar as partes, o item mostra 'Concluido'.",
       "sha256": "94B2CC85EED2FFE3FA6240243BDE6B85B43A911ED3672D6F6336994558AE8F8A",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.4/DownloadManager.exe"
+    },
+    {
+      "version": "1.2.5",
+      "notes": "Downloads ja iniciados migram sozinhos para a novo formato: ao abrir, a pasta temporaria de cada download incompleto antigo e movida para a pasta de destino escolhida (subpasta .dm-temp propria, que some ao terminar) e o download continua de onde parou. A juncao agora pode ser pausada/cancelada/desligada no meio sem travar e sem deixar arquivo parcial (retoma a juncao depois). A velocidade ficou mais estavel: as reconexoes apos queda de conexao agora sao escalonadas com pequena variacao de tempo, evitando que todas as partes caiam para 0 ao mesmo tempo em servidores que limitam conexoes.",
+      "sha256": "7354409B3A62195BD35EF16551BA238C792C9EC167A21E5AB369E25BC6CB19EB",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.5/DownloadManager.exe"
     }
   ]
 }

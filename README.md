@@ -109,6 +109,12 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.2.5** — downloads já iniciados migram sozinhos + junção sem travar + velocidade mais estável:
+  - **Migração automática:** ao abrir o aplicativo, a pasta temporária de cada download incompleto antigo é **movida para a pasta de destino escolhida** (cada um com a sua subpasta `.dm-temp-…`, que some ao terminar) e o download **continua de onde parou**;
+  - **Junção pode ser interrompida:** pausar, cancelar ou fechar durante a montagem do arquivo agora **para de forma limpa**, sem travar e sem deixar arquivo parcial — a junção retoma quando você continuar;
+  - **Velocidade mais estável:** as reconexões após quedas de conexão foram **escalonadas com variação de tempo**, para que todas as partes não caiam a 0 juntas em servidores que limitam conexões (típico de proxies como o dlproxy). Dica: em servidores/túneis que limitam conexões por IP, **menos partes** (ex.: 32–64) costumam dar velocidade maior do que 256.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.5)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.5/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.2.4** — a pasta temporária agora acompanha o destino e a velocidade fica no máximo até o fim:
   - **Pasta temporária dentro do destino:** ao escolher outra pasta ao baixar, as partes são montadas **na própria pasta escolhida** (cada download usa a sua subpasta temporária separada, ex.: `.dm-temp-…`, que some assim que o arquivo fica pronto). Removida a opção de pasta temporária das configurações;
   - **Velocidade máxima até o fim:** quando uma parte termina, o trabalho restante é **redistribuído entre as conexões ativas** — a velocidade sobe conforme as partes concluem, até a última;
