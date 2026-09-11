@@ -110,6 +110,11 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.2.2** — correção na atualização automática:
+  - Ao escolher **atualizar**, o programa baixa o novo executável completo, fecha, **substitui o arquivo antigo no mesmo lugar** e **reabre sozinho já na versão nova** — sem deixar arquivo separado para abrir na mão;
+  - Se o sistema demorar a liberar o arquivo (processo/antivírus), o programa **tenta de novo automaticamente** até conseguir trocar o executável.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.2)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.2/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.2.1** — correção de desempenho:
   - **Painel de partes virtualizado:** ao expandir um download, o programa desenha **apenas as partes visíveis** — antes criava as 256 de uma vez, o que causava a trava ao clicar;
   - **Progresso das partes a 1×/s:** em vez de atualizar tudo a cada 250 ms, agora atualiza 1 vez por segundo, mantendo a fluidez sem pesar na interface.

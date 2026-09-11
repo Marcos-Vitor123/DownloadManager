@@ -1,8 +1,8 @@
 {
-  "version": "1.2.1",
-  "notes": "Correcao de desempenho: o painel de partes agora e virtualizado — ao expandir um download para acompanhar as partes baixando, o programa desenha apenas as partes visiveis (antes criava as 256 de uma vez, o que causava a trava ao clicar). O progresso das partes e atualizado 1 vez por segundo, mantendo a fluidez sem pesar na interface.",
-  "sha256": "fa0f7b815236ab380c7519b4ab8e7a951b84388ac57debd16d08c6ad2a71f9e4",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.1/DownloadManager.exe",
+  "version": "1.2.2",
+  "notes": "Correcao na atualizacao automatica: ao escolher atualizar, o programa agora baixa o novo executavel completo, fecha, substitui o arquivo antigo no mesmo lugar (com novas tentativas se o sistema demorar a liberar o arquivo) e reabre sozinho ja na versao nova. Nao deixa mais arquivo separado para o usuario abrir na mao.",
+  "sha256": "b08be03d059bd0a26e201e301771f0222d2013372551730605745999eab660ea",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.2/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -27,6 +27,12 @@
       "notes": "Correcao de desempenho: o painel de partes agora e virtualizado — ao expandir um download para acompanhar as partes baixando, o programa desenha apenas as partes visiveis (antes criava as 256 de uma vez, o que causava a trava ao clicar). O progresso das partes e atualizado 1 vez por segundo, mantendo a fluidez sem pesar na interface.",
       "sha256": "fa0f7b815236ab380c7519b4ab8e7a951b84388ac57debd16d08c6ad2a71f9e4",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.1/DownloadManager.exe"
+    },
+    {
+      "version": "1.2.2",
+      "notes": "Correcao na atualizacao automatica: ao escolher atualizar, o programa agora baixa o novo executavel completo, fecha, substitui o arquivo antigo no mesmo lugar (com novas tentativas se o sistema demorar a liberar o arquivo) e reabre sozinho ja na versao nova. Nao deixa mais arquivo separado para o usuario abrir na mao.",
+      "sha256": "b08be03d059bd0a26e201e301771f0222d2013372551730605745999eab660ea",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.2/DownloadManager.exe"
     }
   ]
 }
