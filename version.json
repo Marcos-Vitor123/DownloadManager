@@ -1,8 +1,8 @@
 {
-  "version": "1.2.2",
-  "notes": "Correcao na atualizacao automatica: ao escolher atualizar, o programa agora baixa o novo executavel completo, fecha, substitui o arquivo antigo no mesmo lugar (com novas tentativas se o sistema demorar a liberar o arquivo) e reabre sozinho ja na versao nova. Nao deixa mais arquivo separado para o usuario abrir na mao.",
-  "sha256": "b08be03d059bd0a26e201e301771f0222d2013372551730605745999eab660ea",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.2/DownloadManager.exe",
+  "version": "1.2.3",
+  "notes": "Correcao de desempenho geral: os downloads agora rodam totalmente fora da tela principal, o salvamento do progresso e do historico deixou de ser feito na thread da interface (nao trava mais cliques, configuracoes, bandeja ou fechamento), a lista de downloads ficou virtualizada e as informacoes da tela sao atualizadas 1x por segundo em vez de 4x.",
+  "sha256": "1597476068fb037d8b0517adb22054042c833ccb605dbac60101cc3b778acc2c",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.3/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -33,6 +33,12 @@
       "notes": "Correcao na atualizacao automatica: ao escolher atualizar, o programa agora baixa o novo executavel completo, fecha, substitui o arquivo antigo no mesmo lugar (com novas tentativas se o sistema demorar a liberar o arquivo) e reabre sozinho ja na versao nova. Nao deixa mais arquivo separado para o usuario abrir na mao.",
       "sha256": "b08be03d059bd0a26e201e301771f0222d2013372551730605745999eab660ea",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.2/DownloadManager.exe"
+    },
+    {
+      "version": "1.2.3",
+      "notes": "Correcao de desempenho geral: os downloads agora rodam totalmente fora da tela principal, o salvamento do progresso e do historico deixou de ser feito na thread da interface (nao trava mais cliques, configuracoes, bandeja ou fechamento), a lista de downloads ficou virtualizada e as informacoes da tela sao atualizadas 1x por segundo em vez de 4x.",
+      "sha256": "1597476068fb037d8b0517adb22054042c833ccb605dbac60101cc3b778acc2c",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.3/DownloadManager.exe"
     }
   ]
 }

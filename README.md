@@ -110,6 +110,12 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.2.3** — correção de desempenho geral (resposta aos cliques):
+  - Os downloads agora rodam **totalmente fora da janela principal** — antes cada etapa voltava para a tela (inclusive a montagem do arquivo), o que fazia o programa travar e demorar a responder cliques, configurações, bandeja e até fechar;
+  - O salvamento do progresso e do histórico **não é mais feito na thread da interface** (escrever JSON no disco a cada 2s na tela era uma das causas da "bolinha azul");
+  - A **lista de downloads ficou virtualizada** (só desenha os itens visíveis) e as informações da tela passaram a ser atualizadas **1× por segundo** em vez de 4×.
+  - 📥 **[Baixar DownloadManager.exe (v1.2.3)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.3/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.2.2** — correção na atualização automática:
   - Ao escolher **atualizar**, o programa baixa o novo executável completo, fecha, **substitui o arquivo antigo no mesmo lugar** e **reabre sozinho já na versão nova** — sem deixar arquivo separado para abrir na mão;
   - Se o sistema demorar a liberar o arquivo (processo/antivírus), o programa **tenta de novo automaticamente** até conseguir trocar o executável.
