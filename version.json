@@ -1,8 +1,8 @@
 {
-  "version": "1.3.4",
-  "notes": "Links temporarios/assinados (tipo dlproxy?sig=...) corrigidos: antes o programa consumia ou falhava o link nos passos de captura (HEAD/probe de range), dando erro e tamanho desconhecido. Agora links com token/signature usam conexao unica direta: nenhum request extra antes do download real, arquivo gravado direto, e se o link expirar ou for usado aparece a mensagem 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.'",
-  "sha256": "4854B0FB75DA00C4C05B227C7A2CC4139B5D85D4F33EA4D7A691FE7FD31D0C19",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe",
+  "version": "1.3.5",
+  "notes": "Links temporarios com token agora voltam a baixar em varias partes (dividir + juntar rapido) — se o servidor suportar range, o app comeca com 1 conexao, descobre o tamanho e expande automaticamente para ate 256 partes configuradas, igual torrent. Link expirado mostra mensagem clara 'O link temporario expirou ou ja foi usado'. Espaco em disco e recomendacao ja existem desde v1.3.1.",
+  "sha256": "BC2500D7A7D1E9AB1DC333BA9ED3A5FAD05FB2137333C2F3E1A60F196DDCB633",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.5/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -87,6 +87,12 @@
       "notes": "Links temporarios/assinados (tipo dlproxy?sig=...) corrigidos: antes o programa consumia ou falhava o link nos passos de captura (HEAD/probe de range), dando erro e tamanho desconhecido. Agora links com token/signature usam conexao unica direta: nenhum request extra antes do download real, arquivo gravado direto, e se o link expirar ou for usado aparece a mensagem 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.'",
       "sha256": "4854B0FB75DA00C4C05B227C7A2CC4139B5D85D4F33EA4D7A691FE7FD31D0C19",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.5",
+      "notes": "Links temporarios com token voltam a baixar em varias partes (dividir + juntar rapido, igual torrent): comeca com 1 conexao, descobre o tamanho e expande automaticamente para ate 256 partes configuradas. Link expirado mostra mensagem clara. Espaco em disco e recomendacao ja existem desde v1.3.1.",
+      "sha256": "BC2500D7A7D1E9AB1DC333BA9ED3A5FAD05FB2137333C2F3E1A60F196DDCB633",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.5/DownloadManager.exe"
     }
   ]
 }

@@ -109,6 +109,12 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.3.5** — links temporários com token (tipo `dlproxy?sig=...`) **voltam a baixar em várias partes, igual torrent**:
+  - Começa com 1 conexão, descobre o tamanho e **expande automaticamente para até 256 partes** se o servidor suportar range (mesmo comportamento de antes da v1.3.4);
+  - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
+  - O passo extra de HEAD/probe foi removido (não desperdiça requisições no link).
+  - 📥 **[Baixar DownloadManager.exe (v1.3.5)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.5/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.3.4** — links temporários/assinados corrigidos:
   - Links com token (tipo `dlproxy...?sig=...`) **não são mais pré-consumidos**: o programa não faz mais HEAD/probe antes; baixa direto com a conexão única gravando no arquivo final;
   - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
