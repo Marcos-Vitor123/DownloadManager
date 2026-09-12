@@ -109,6 +109,11 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.3.3** — início com o Windows corrigido:
+  - **3 opções** em Configurações → "Início com o Windows": **Não iniciar** / **Iniciar oculto (só na bandeja)** / **Iniciar aberto (janela normal)**;
+  - **Oculto agora não mostra nada na tela ao ligar o PC** — o quadrado preto que aparecia brevemente foi eliminado (a janela não é mais exibida para depois esconder).
+  - 📥 **[Baixar DownloadManager.exe (v1.3.3)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.3/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.3.2** — correção de velocidade com partes múltiplas:
   - **Escrita ordenada no arquivo final:** as partes de um mesmo download novo gravam no arquivo final de forma **serializada** (uma por vez), eliminando a perda de desempenho quando várias partes gravavam no mesmo arquivo ao mesmo tempo;
   - **Internet continua paralelo:** a leitura da rede segue 100% em paralelo — conforme uma parte termina, o gravador pega uma nova parte e **a velocidade das partes restantes aumenta** (redistribuição);

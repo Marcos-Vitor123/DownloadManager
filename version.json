@@ -1,8 +1,8 @@
 {
-  "version": "1.3.2",
-  "notes": "Correcao importante de velocidade: as partes de um mesmo download novo passam a gravar no arquivo final de forma ordenada (serializada), evitando perda de desempenho quando varias partes gravam no mesmo arquivo ao mesmo tempo. A leitura da internet continua 100% paralela - conforme uma parte termina, quem estava gravando pega uma nova parte e a banda dos que sobraram aumenta (redistribuicao). Segmentos padrao subiram de 8 para 16 partes (ajustavel ate 256 em Configuracoes).",
-  "sha256": "64A6DC417C76187D8BDA60F27793ADF94F458A68855D85D47E04DEB99911E819",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.2/DownloadManager.exe",
+  "version": "1.3.3",
+  "notes": "Correcao do inicio com o Windows: agora em Configuracoes > 'Inicio com o Windows' ha 3 opcoes - (1) Nao iniciar, (2) Iniciar oculto: nenhuma janela aparece na tela ao ligar o computador, so o icone na bandeja (antigamente aparecia um quadrado preto brevemente), (3) Iniciar aberto: a janela normal ja abre na inicializacao. O modo oculto agora inicia sem jamais exibir a janela (a causa do quadrado preto era a janela sendo mostrada e escondida em seguida).",
+  "sha256": "F5A6372B1FFA62525CFCA4718766C290032B1DC4B4DF1E3EF777ED08CB326924",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.3/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -75,6 +75,12 @@
       "notes": "Correcao importante de velocidade: as partes de um mesmo download novo passam a gravar no arquivo final de forma ordenada (serializada), evitando perda de desempenho quando varias partes gravam no mesmo arquivo ao mesmo tempo. A leitura da internet continua 100% paralela - conforme uma parte termina, quem estava gravando pega uma nova parte e a banda dos que sobraram aumenta (redistribuicao). Segmentos padrao subiram de 8 para 16 partes (ajustavel ate 256 em Configuracoes).",
       "sha256": "64A6DC417C76187D8BDA60F27793ADF94F458A68855D85D47E04DEB99911E819",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.2/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.3",
+      "notes": "Correcao do inicio com o Windows: agora em Configuracoes > 'Inicio com o Windows' ha 3 opcoes - (1) Nao iniciar, (2) Iniciar oculto: nenhuma janela aparece na tela ao ligar o computador, so o icone na bandeja (antigamente aparecia um quadrado preto brevemente), (3) Iniciar aberto: a janela normal ja abre na inicializacao. O modo oculto agora inicia sem jamais exibir a janela (a causa do quadrado preto era a janela sendo mostrada e escondida em seguida).",
+      "sha256": "F5A6372B1FFA62525CFCA4718766C290032B1DC4B4DF1E3EF777ED08CB326924",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.3/DownloadManager.exe"
     }
   ]
 }
