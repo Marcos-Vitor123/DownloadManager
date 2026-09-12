@@ -109,13 +109,13 @@ Para executar mesmo assim:
 
 ## Versões
 
-- **v1.3.5** — links temporários com token (tipo `dlproxy?sig=...`) **voltam a baixar em várias partes, igual torrent**:
-  - Começa com 1 conexão, descobre o tamanho e **expande automaticamente para até 256 partes** se o servidor suportar range (mesmo comportamento de antes da v1.3.4);
-  - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
-  - O passo extra de HEAD/probe foi removido (não desperdiça requisições no link).
-  - 📥 **[Baixar DownloadManager.exe (v1.3.5)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.5/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+- **v1.3.6** — links temporários/assinados **voltam a baixar em várias partes de verdade**:
+  - O bug: esses links estavam baixando em 1 conexão só (ficavam travados, só "Parte 1 0 B") porque a descoberta não testava range;
+  - Agora a 1ª requisição envia `Range: bytes=0-0` (1 byte): descobri tamanho **e** suporte a partes de uma vez; se o servidor responder 206, **expande automaticamente para até 256 partes**;
+  - Se o link expirou/foi usado: mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.6)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.6/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
-- **v1.3.4** — links temporários/assinados corrigidos:
+- **v1.3.5** — links temporários com token voltam a expandir para partes:
   - Links com token (tipo `dlproxy...?sig=...`) **não são mais pré-consumidos**: o programa não faz mais HEAD/probe antes; baixa direto com a conexão única gravando no arquivo final;
   - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
   - Nome do arquivo e tamanho passam a ser capturados no próprio download.
