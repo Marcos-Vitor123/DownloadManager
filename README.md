@@ -109,6 +109,12 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.3.4** — links temporários/assinados corrigidos:
+  - Links com token (tipo `dlproxy...?sig=...`) **não são mais pré-consumidos**: o programa não faz mais HEAD/probe antes; baixa direto com a conexão única gravando no arquivo final;
+  - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
+  - Nome do arquivo e tamanho passam a ser capturados no próprio download.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.4)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.3.3** — início com o Windows corrigido:
   - **3 opções** em Configurações → "Início com o Windows": **Não iniciar** / **Iniciar oculto (só na bandeja)** / **Iniciar aberto (janela normal)**;
   - **Oculto agora não mostra nada na tela ao ligar o PC** — o quadrado preto que aparecia brevemente foi eliminado (a janela não é mais exibida para depois esconder).

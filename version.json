@@ -1,8 +1,8 @@
 {
-  "version": "1.3.3",
-  "notes": "Correcao do inicio com o Windows: agora em Configuracoes > 'Inicio com o Windows' ha 3 opcoes - (1) Nao iniciar, (2) Iniciar oculto: nenhuma janela aparece na tela ao ligar o computador, so o icone na bandeja (antigamente aparecia um quadrado preto brevemente), (3) Iniciar aberto: a janela normal ja abre na inicializacao. O modo oculto agora inicia sem jamais exibir a janela (a causa do quadrado preto era a janela sendo mostrada e escondida em seguida).",
-  "sha256": "F5A6372B1FFA62525CFCA4718766C290032B1DC4B4DF1E3EF777ED08CB326924",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.3/DownloadManager.exe",
+  "version": "1.3.4",
+  "notes": "Links temporarios/assinados (tipo dlproxy?sig=...) corrigidos: antes o programa consumia ou falhava o link nos passos de captura (HEAD/probe de range), dando erro e tamanho desconhecido. Agora links com token/signature usam conexao unica direta: nenhum request extra antes do download real, arquivo gravado direto, e se o link expirar ou for usado aparece a mensagem 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.'",
+  "sha256": "4854B0FB75DA00C4C05B227C7A2CC4139B5D85D4F33EA4D7A691FE7FD31D0C19",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -81,6 +81,12 @@
       "notes": "Correcao do inicio com o Windows: agora em Configuracoes > 'Inicio com o Windows' ha 3 opcoes - (1) Nao iniciar, (2) Iniciar oculto: nenhuma janela aparece na tela ao ligar o computador, so o icone na bandeja (antigamente aparecia um quadrado preto brevemente), (3) Iniciar aberto: a janela normal ja abre na inicializacao. O modo oculto agora inicia sem jamais exibir a janela (a causa do quadrado preto era a janela sendo mostrada e escondida em seguida).",
       "sha256": "F5A6372B1FFA62525CFCA4718766C290032B1DC4B4DF1E3EF777ED08CB326924",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.3/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.4",
+      "notes": "Links temporarios/assinados (tipo dlproxy?sig=...) corrigidos: antes o programa consumia ou falhava o link nos passos de captura (HEAD/probe de range), dando erro e tamanho desconhecido. Agora links com token/signature usam conexao unica direta: nenhum request extra antes do download real, arquivo gravado direto, e se o link expirar ou for usado aparece a mensagem 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.'",
+      "sha256": "4854B0FB75DA00C4C05B227C7A2CC4139B5D85D4F33EA4D7A691FE7FD31D0C19",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe"
     }
   ]
 }
