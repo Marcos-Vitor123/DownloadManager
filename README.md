@@ -109,6 +109,9 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.3.7** — fechar com o **X encerra o programa de verdade** (nenhum processo do DownloadManager fica rodando em segundo plano).
+  - 📥 **[Baixar DownloadManager.exe (v1.3.7)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
 - **v1.3.6** — links temporários/assinados **voltam a baixar em várias partes de verdade**:
   - O bug: esses links estavam baixando em 1 conexão só (ficavam travados, só "Parte 1 0 B") porque a descoberta não testava range;
   - Agora a 1ª requisição envia `Range: bytes=0-0` (1 byte): descobri tamanho **e** suporte a partes de uma vez; se o servidor responder 206, **expande automaticamente para até 256 partes**;

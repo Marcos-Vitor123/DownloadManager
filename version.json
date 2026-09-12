@@ -1,8 +1,8 @@
 {
-"version": "1.3.6",
-  "notes": "Corrigido: links temporarios/assinados estavam baixando em UMA conexao (pareciam travados, so mostrava 'Parte 1 0 B'). Agora a primeira requisicao envia Range bytes=0-0 (1 byte) para descobrir tamanho E suporte a partes; se o servidor responder 206, o app expande automaticamente para ate 256 partes configuradas como antes. Link expirado mostra mensagem clara.",
-  "sha256": "113FE45F6DAE004643C9E1E7F5ADA6C30F395F4BFCCC3966B881BF0CA3151607",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.6/DownloadManager.exe",
+"version": "1.3.7",
+  "notes": "Fechamento agora encerra o processo de verdade ao clicar no X: saia qualquer janela restante e nenhum processo do DownloadManager fica rodando (era relatado que o programa continuava aberto mesmo depois de fechar).",
+  "sha256": "696E31E80854ED2E87261C8574526FD5A7360537D741BF70B74FCFB20883C186",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -99,6 +99,12 @@
       "notes": "Links temporarios/assinados voltam a baixar em varias partes: a primeira requisicao envia Range bytes=0-0 (1 byte) para descobrir tamanho e suporte a partes; se responder 206, expande automaticamente para ate 256 partes. Link expirado mostra mensagem clara. Espaco recomendado em v1.3.1.",
       "sha256": "113FE45F6DAE004643C9E1E7F5ADA6C30F395F4BFCCC3966B881BF0CA3151607",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.6/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.7",
+      "notes": "Fechamento encerra o processo de verdade ao clicar no X (antes ficava processo em segundo plano).",
+      "sha256": "696E31E80854ED2E87261C8574526FD5A7360537D741BF70B74FCFB20883C186",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe"
     }
   ]
 }
