@@ -1,8 +1,8 @@
 {
-  "version": "1.4.2",
-  "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
-  "sha256": "3639245FA4CA961A8957EF6F68D5A89D8396245F4C0DBFEAA01A039B653E64F8",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe",
+  "version": "1.4.3",
+  "notes": "Nova versao: protecao contra a lista de downloads sumir. Antes, se o programa morresse no instante exato de um salvamento, ele podia gravar o estado corrompido por cima do estado bom e o download sumia da lista (foi exatamente o que aconteceu no download grande de 28/09 - o item aparecia zerado/cheio de NULs). Agora: antes de salvar, o programa valida o estado - se sair lixo (JSON quebrado ou com NULs), grava num arquivo .bad e NAO sobrescreve o estado bom; a cada salvamento valido fica guardada uma copia do estado anterior (.prev), e se o estado atual for apagado ou corrompido (antivirus, limpeza de disco, gravacao ruim), ao abrir o programa a lista volta sozinha do .prev com nome, destino e progresso; e se nem o mapa de partes sobreviver, o progresso e reconstruido do proprio arquivo final (pelas regioes realmente alocadas no disco) e o download continua de onde parou, em vez de recomecar do zero. Toda versao nova reconhece e continua os downloads em andamento de versoes anteriores.",
+  "sha256": "CAC84A59EA0086EEB1F8A388DAFFE74F1F77AFE2456392AA9B69130A6BB37AA6",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.3/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -135,6 +135,12 @@
       "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
       "sha256": "3639245FA4CA961A8957EF6F68D5A89D8396245F4C0DBFEAA01A039B653E64F8",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe"
+    },
+    {
+      "version": "1.4.3",
+      "notes": "Nova versao: protecao contra a lista de downloads sumir. Antes, se o programa morresse no instante exato de um salvamento, ele podia gravar o estado corrompido por cima do estado bom e o download sumia da lista (foi exatamente o que aconteceu no download grande de 28/09 - o item aparecia zerado/cheio de NULs). Agora: antes de salvar, o programa valida o estado - se sair lixo (JSON quebrado ou com NULs), grava num arquivo .bad e NAO sobrescreve o estado bom; a cada salvamento valido fica guardada uma copia do estado anterior (.prev), e se o estado atual for apagado ou corrompido (antivirus, limpeza de disco, gravacao ruim), ao abrir o programa a lista volta sozinha do .prev com nome, destino e progresso; e se nem o mapa de partes sobreviver, o progresso e reconstruido do proprio arquivo final (pelas regioes realmente alocadas no disco) e o download continua de onde parou, em vez de recomecar do zero. Toda versao nova reconhece e continua os downloads em andamento de versoes anteriores.",
+      "sha256": "CAC84A59EA0086EEB1F8A388DAFFE74F1F77AFE2456392AA9B69130A6BB37AA6",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.3/DownloadManager.exe"
     }
   ]
 }
