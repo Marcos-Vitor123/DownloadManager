@@ -109,6 +109,34 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.4.1** — depois de uma queda de energia (ou quando o servidor simplesmente esquece a conexão), o download não fica mais eternamente em "Baixando" a 0 B/s:
+  - **Timeout de 45 s por conexão:** se uma parte fica 45 segundos sem receber NENHUM byte, a conexão é considerada morta e abandonada — o download continua de onde parou com uma conexão nova (nova requisição do trecho), sem perder nada do que já chegou;
+  - **Link temporário com o servidor fora do ar:** depois de 8 falhas seguidas na mesma parte, aparece um erro claro — *"O servidor do link temporário parou de responder várias vezes. O link pode ter expirado — gere um novo link, ou clique em ▶ para tentar de novo."* — em vez de tentar para sempre em silêncio. Links normais continuam tentando sozinhos: se a internet cair e voltar, o download retoma;
+  - **Erro real na tela:** as mensagens de erro agora mostram a causa verdadeira do problema, em vez do genérico "One or more errors occurred.".
+  - 📥 **[Baixar DownloadManager.exe (v1.4.1)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.1/DownloadManager.exe)** — arquivo único, ~75 MB, não precisa instalar .NET.
+
+- **v1.4.0** — ao continuar um download cujo link temporário (assinado) expirou ou já foi usado, o programa detecta na hora:
+  - Antes ficava parado em "Baixando" por vários minutos sem mostrar nada na tela; agora aparece na hora *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
+  - Um download começado numa versão antiga **continua na versão nova exatamente de onde parou**, sem quebrar o vínculo entre o arquivo parcial e o progresso salvo;
+  - A lista de downloads agora é gravada em **dois lugares**: na pasta principal e numa cópia de segurança em outra pasta do Windows — se a principal for apagada (por engano, antivírus ou limpeza de disco), a lista volta sozinha ao abrir o programa, com o progresso de cada download intacto.
+  - 📥 **[Baixar DownloadManager.exe (v1.4.0)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.0/DownloadManager.exe)** — arquivo único, ~75 MB, não precisa instalar .NET.
+
+- **v1.3.9** — nenhuma conexão fica mais parada esperando as outras terminarem:
+  - Quando uma conexão termina a parte dela, em vez de ficar ociosa ela **vai ajudar a parte que mais falta**, pegando um pedaço do meio e preenchendo a partir do fim daquela parte, enquanto o dono original continua pelo começo — as duas pontas se encontram no meio e a parte fecha;
+  - Com isso as 256 conexões terminam **praticamente juntas**, em vez de uma a uma enquanto o resto fica sem baixar nada;
+  - O tamanho da ajuda **nunca é fixo**: é calculado a cada vez a partir de quanto ainda falta, então funciona com qualquer tamanho de arquivo e qualquer quantidade de partes;
+  - Cada parte é preenchida pelas duas pontas e os **dois progressos são gravados** — se o computador desligar ou a conexão cair, o download continua exatamente de onde parou, inclusive do pedaço preenchido pelo lado de trás;
+  - Correções: a conexão que ajuda só é creditada quando o pedaço inteiro chega (antes, uma queda no meio fazia a retomada pular o trecho já escrito e deixar o arquivo com buracos de zeros); pausar no meio de uma ajuda não trava mais o download; continuar um download logo depois de pausar não apaga mais o botão de pausar.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.9)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.9/DownloadManager.exe)** — arquivo único, ~75 MB, não precisa instalar .NET.
+
+- **v1.3.8** — corrige o travamento em downloads grandes:
+  - Antes o programa ficava preso em velocidade quase zero e o download em andamento sumia da lista ao reabrir o programa;
+  - Link temporário/assinado (?sig=) deixa de ser tratado como **conexão única**: uma **sonda de 1 byte** descobre tamanho, nome real e suporte a Range antes do primeiro byte, então o download já começa com até 256 partes (segue sua configuração: 32, 64, 128 ou 256);
+  - O arquivo final passa a ser **esparsado**: o Windows só reserva o espaço já baixado, em vez de reservar os 161 GB de uma vez;
+  - As conexões **sobem aos poucos** (8 no início, +1 a cada 0,9 s) em vez de 256 de uma vez;
+  - **Progresso gravado de verdade** (antes nenhuma gravação dava certo e o download não voltava para a lista ao reiniciar): agora é salvo no fechamento, a cada 3 segundos e a cada parte concluída, e só depois de gravar no disco — para a retomada nunca começar de um ponto que ainda não existe no arquivo.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.8)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.8/DownloadManager.exe)** — arquivo único, ~75 MB, não precisa instalar .NET.
+
 - **v1.3.7** — fechar com o **X encerra o programa de verdade** (nenhum processo do DownloadManager fica rodando em segundo plano).
   - 📥 **[Baixar DownloadManager.exe (v1.3.7)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
 
@@ -123,6 +151,12 @@ Para executar mesmo assim:
   - Se o link **expirou ou já foi usado**, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*;
   - Nome do arquivo e tamanho passam a ser capturados no próprio download.
   - 📥 **[Baixar DownloadManager.exe (v1.3.4)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe)** — arquivo único, ~68 MB, não precisa instalar .NET.
+
+- **v1.3.4** — links temporários/assinados (tipo dlproxy?sig=...) corrigidos:
+  - Antes o programa consumia ou falhava o link nos passos de captura (HEAD/probe de range), dando erro e tamanho desconhecido;
+  - Agora links com token/signature usam **conexão única direta**: nenhum request extra antes do download real, arquivo gravado direto;
+  - Se o link expirar ou já for usado, aparece a mensagem *"O link temporário expirou ou já foi usado. Gere um novo link e tente novamente."*.
+  - 📥 **[Baixar DownloadManager.exe (v1.3.4)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.4/DownloadManager.exe)** — arquivo único, ~75 MB, não precisa instalar .NET.
 
 - **v1.3.3** — início com o Windows corrigido:
   - **3 opções** em Configurações → "Início com o Windows": **Não iniciar** / **Iniciar oculto (só na bandeja)** / **Iniciar aberto (janela normal)**;
