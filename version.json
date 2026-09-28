@@ -1,8 +1,8 @@
 {
-  "version": "1.3.9",
-  "notes": "Nova versao: nenhuma conexao fica mais parada esperando as outras terminarem. Quando uma conexao acaba a parte dela, em vez de ficar ociosa ela vai ajudar a parte que mais falta, pegando um pedaco do meio e preenchendo a partir do fim daquela parte, enquanto o dono original continua pelo comeco. As duas pontas se encontram no meio e a parte fecha. Com isso as 256 conexoes terminam praticamente juntas, em vez de uma a uma enquanto o resto fica sem baixar nada. O tamanho da ajuda nunca e fixo: ele e calculado a cada vez a partir de quanto ainda falta, entao funciona com qualquer tamanho de arquivo e qualquer quantidade de partes. Cada parte passou a ser preenchida pelas duas pontas, e os dois progressos sao gravados - se o computador desligar ou a conexao cair, o download continua exatamente de onde parou, inclusive do pedaco preenchido pelo lado de tras. Tres correcoes: a conexao que ajuda so e creditada quando o pedaco inteiro chega (antes, uma queda no meio fazia a retomada pular o trecho ja escrito e deixar o arquivo com buracos de zeros); pausar no meio de uma ajuda nao trava mais o download; e continuar um download logo depois de pausar nao apaga mais o botao de pausar. A quantidade de partes continua seguindo sua configuracao: 32, 64, 128 ou 256.",
-  "sha256": "a02efac60440f19f4495e47bba66737a063a5f7e219de9e67c8a3daf3c7b7ed6",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.9/DownloadManager.exe",
+  "version": "1.4.0",
+  "notes": "Nova versao: ao continuar um download cujo link temporario (assinado) expirou ou ja foi usado, o programa agora detecta isso na hora e mostra 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.' em vez de ficar parado em 'Baixando' por varios minutos sem mostrar nada na tela. E um download comecado numa versao antiga continua na versao nova exatamente de onde parou, sem quebrar o vinculo entre o arquivo parcial e o progresso salvo. A lista de downloads agora e gravada em DOIS lugares: na pasta principal e uma copia de seguranca em outra pasta do Windows. Se a pasta principal for apagada por engano, por um antivirus ou por uma limpeza de disco, a lista volta sozinha ao abrir o programa, com o progresso de cada download intacto.",
+  "sha256": "70A139DBB642C96DC2DBD08241DB2D379B598FA5F4B0133EA4D26804F92E048C",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.0/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -117,6 +117,12 @@
       "notes": "Nova versao: nenhuma conexao fica mais parada esperando as outras terminarem. Quando uma conexao acaba a parte dela, em vez de ficar ociosa ela vai ajudar a parte que mais falta, pegando um pedaco do meio e preenchendo a partir do fim daquela parte, enquanto o dono original continua pelo comeco. As duas pontas se encontram no meio e a parte fecha. Com isso as 256 conexoes terminam praticamente juntas, em vez de uma a uma enquanto o resto fica sem baixar nada. O tamanho da ajuda nunca e fixo: ele e calculado a cada vez a partir de quanto ainda falta, entao funciona com qualquer tamanho de arquivo e qualquer quantidade de partes. Cada parte passou a ser preenchida pelas duas pontas, e os dois progressos sao gravados - se o computador desligar ou a conexao cair, o download continua exatamente de onde parou, inclusive do pedaco preenchido pelo lado de tras. Tres correcoes: a conexao que ajuda so e creditada quando o pedaco inteiro chega (antes, uma queda no meio fazia a retomada pular o trecho ja escrito e deixar o arquivo com buracos de zeros); pausar no meio de uma ajuda nao trava mais o download; e continuar um download logo depois de pausar nao apaga mais o botao de pausar. A quantidade de partes continua seguindo sua configuracao: 32, 64, 128 ou 256.",
       "sha256": "a02efac60440f19f4495e47bba66737a063a5f7e219de9e67c8a3daf3c7b7ed6",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.9/DownloadManager.exe"
+    },
+    {
+      "version": "1.4.0",
+      "notes": "Nova versao: ao continuar um download cujo link temporario (assinado) expirou ou ja foi usado, o programa agora detecta isso na hora e mostra 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.' em vez de ficar parado em 'Baixando' por varios minutos sem mostrar nada na tela. E um download comecado numa versao antiga continua na versao nova exatamente de onde parou, sem quebrar o vinculo entre o arquivo parcial e o progresso salvo. A lista de downloads agora e gravada em DOIS lugares: na pasta principal e uma copia de seguranca em outra pasta do Windows. Se a pasta principal for apagada por engano, por um antivirus ou por uma limpeza de disco, a lista volta sozinha ao abrir o programa, com o progresso de cada download intacto.",
+      "sha256": "70A139DBB642C96DC2DBD08241DB2D379B598FA5F4B0133EA4D26804F92E048C",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.0/DownloadManager.exe"
     }
   ]
 }
