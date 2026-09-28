@@ -109,6 +109,14 @@ Para executar mesmo assim:
 
 ## Versões
 
+- **v1.4.3** - a lista de downloads não "some do nada" mais:
+  - **Causa raiz corrigida:** o estado podia ser gravado corrompido se o programa morresse no instante exato de um salvamento - e o download sumia da lista. Não era vírus nem pasta apagada (aconteceu de verdade em 28/09, num download de 161 GB que apareceu zerado);
+  - **Salvamento só se for válido:** antes de gravar, o programa valida o estado; se sair lixo (quebrado ou com NULs), grava num arquivo `.bad` e NÃO sobrescreve o estado bom;
+  - **Cópia do estado anterior (`.prev`):** a cada salvamento válido fica guardada uma cópia do estado anterior - se o estado atual for apagado ou corrompido (antivírus, limpeza de disco), ao abrir o programa a lista volta sozinha com nome, destino e progresso;
+  - **Progresso reconstruído do disco:** se nem o mapa de partes sobreviver, o progresso é reconstruído do próprio arquivo final (pelas regiões realmente alocadas) e o download continua de onde parou, em vez de recomeçar do zero;
+  - **Continuidade entre versões:** toda versão nova reconhece e continua os downloads em andamento iniciados em versões anteriores;
+  - 📥 **[Baixar DownloadManager.exe (v1.4.3)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.3/DownloadManager.exe)** - arquivo único, ~165 MB, não precisa instalar .NET.
+
 - **v1.4.2** — o download que ficava **para sempre em "Baixando" a 0 B/s** num link temporário (uso único, tipo dlproxy) agora é detectado e avisado:
   - **Trava de rendimento:** se o link de uso único não anda nada (menos de 64 MB) em 5 minutos, o download para com o erro claro — *"O servidor do link temporário parou de responder várias vezes. O link pode ter expirado — gere um novo link, ou clique em ▶ para tentar de novo."* — em vez de ficar em silêncio a 0 B/s para sempre;
   - **Máximo de 32 conexões em links de uso único:** abrir 256 conexões TLS de uma vez entope o túnel (dlproxy) e derruba a velocidade para ~0 B/s depois de alguns minutos — a causa do "parou do nada". Com no máximo 32 conexões o download continua paralelo e estável;
