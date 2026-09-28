@@ -1,8 +1,8 @@
 {
-  "version": "1.4.1",
-  "notes": "Nova versao: se uma conexao parar de mandar dados no meio do download - como acontece numa queda de energia, quando o servidor simplesmente esquece a conexao - o programa nao fica mais travado para sempre em 'Baixando' a 0 B/s. Depois de 45 segundos sem receber NENHUM byte, a conexao e considerada morta, abandonada, e o download continua de onde parou com uma conexao nova (nova requisicao de trecho, sem perder nada do que ja chegou). E, num link temporario (assinado) cujo servidor saiu do ar: depois de 8 falhas seguidas numa parte, aparece um erro claro na tela pedindo um link novo ou para tentar de novo, em vez do programa tentar para sempre em silencio. As mensagens de erro agora mostram a causa real do problema em vez do erro generico do sistema.",
-  "sha256": "4EE40A81922DE8F6B7BC55308C10A5A66C170839A7E94C011060DFD7FD416126",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.1/DownloadManager.exe",
+  "version": "1.4.2",
+  "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
+  "sha256": "964811CE933521261D90AB2AD8E877E74B27192FC289FD8E8D6A6278D1BADCDD",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -129,6 +129,12 @@
       "notes": "Nova versao: se uma conexao parar de mandar dados no meio do download - como acontece numa queda de energia, quando o servidor simplesmente esquece a conexao - o programa nao fica mais travado para sempre em 'Baixando' a 0 B/s. Depois de 45 segundos sem receber NENHUM byte, a conexao e considerada morta, abandonada, e o download continua de onde parou com uma conexao nova (nova requisicao de trecho, sem perder nada do que ja chegou). E, num link temporario (assinado) cujo servidor saiu do ar: depois de 8 falhas seguidas numa parte, aparece um erro claro na tela pedindo um link novo ou para tentar de novo, em vez do programa tentar para sempre em silencio. As mensagens de erro agora mostram a causa real do problema em vez do erro generico do sistema.",
       "sha256": "4EE40A81922DE8F6B7BC55308C10A5A66C170839A7E94C011060DFD7FD416126",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.1/DownloadManager.exe"
+    },
+    {
+      "version": "1.4.2",
+      "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
+      "sha256": "964811CE933521261D90AB2AD8E877E74B27192FC289FD8E8D6A6278D1BADCDD",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe"
     }
   ]
 }
