@@ -112,7 +112,7 @@ Para executar mesmo assim:
 - **v1.4.2** — o download que ficava **para sempre em "Baixando" a 0 B/s** num link temporário (uso único, tipo dlproxy) agora é detectado e avisado:
   - **Trava de rendimento:** se o link de uso único não anda nada (menos de 64 MB) em 5 minutos, o download para com o erro claro — *"O servidor do link temporário parou de responder várias vezes. O link pode ter expirado — gere um novo link, ou clique em ▶ para tentar de novo."* — em vez de ficar em silêncio a 0 B/s para sempre;
   - **Máximo de 32 conexões em links de uso único:** abrir 256 conexões TLS de uma vez entope o túnel (dlproxy) e derruba a velocidade para ~0 B/s depois de alguns minutos — a causa do "parou do nada". Com no máximo 32 conexões o download continua paralelo e estável;
-  - 📥 **[Baixar DownloadManager.exe (v1.4.2)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe)** — arquivo único, ~72 MB, não precisa instalar .NET.
+  - 📥 **[Baixar DownloadManager.exe (v1.4.2)](https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe)** — arquivo único, ~165 MB, não precisa instalar .NET.
 
 - **v1.4.1** — depois de uma queda de energia (ou quando o servidor simplesmente esquece a conexão), o download não fica mais eternamente em "Baixando" a 0 B/s:
   - **Timeout de 45 s por conexão:** se uma parte fica 45 segundos sem receber NENHUM byte, a conexão é considerada morta e abandonada — o download continua de onde parou com uma conexão nova (nova requisição do trecho), sem perder nada do que já chegou;
