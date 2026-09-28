@@ -1,8 +1,8 @@
 {
-  "version": "1.4.0",
-  "notes": "Nova versao: ao continuar um download cujo link temporario (assinado) expirou ou ja foi usado, o programa agora detecta isso na hora e mostra 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.' em vez de ficar parado em 'Baixando' por varios minutos sem mostrar nada na tela. E um download comecado numa versao antiga continua na versao nova exatamente de onde parou, sem quebrar o vinculo entre o arquivo parcial e o progresso salvo. A lista de downloads agora e gravada em DOIS lugares: na pasta principal e uma copia de seguranca em outra pasta do Windows. Se a pasta principal for apagada por engano, por um antivirus ou por uma limpeza de disco, a lista volta sozinha ao abrir o programa, com o progresso de cada download intacto.",
-  "sha256": "70A139DBB642C96DC2DBD08241DB2D379B598FA5F4B0133EA4D26804F92E048C",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.0/DownloadManager.exe",
+  "version": "1.4.1",
+  "notes": "Nova versao: se uma conexao parar de mandar dados no meio do download - como acontece numa queda de energia, quando o servidor simplesmente esquece a conexao - o programa nao fica mais travado para sempre em 'Baixando' a 0 B/s. Depois de 45 segundos sem receber NENHUM byte, a conexao e considerada morta, abandonada, e o download continua de onde parou com uma conexao nova (nova requisicao de trecho, sem perder nada do que ja chegou). E, num link temporario (assinado) cujo servidor saiu do ar: depois de 8 falhas seguidas numa parte, aparece um erro claro na tela pedindo um link novo ou para tentar de novo, em vez do programa tentar para sempre em silencio. As mensagens de erro agora mostram a causa real do problema em vez do erro generico do sistema.",
+  "sha256": "4EE40A81922DE8F6B7BC55308C10A5A66C170839A7E94C011060DFD7FD416126",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.1/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -123,6 +123,12 @@
       "notes": "Nova versao: ao continuar um download cujo link temporario (assinado) expirou ou ja foi usado, o programa agora detecta isso na hora e mostra 'O link temporario expirou ou ja foi usado. Gere um novo link e tente novamente.' em vez de ficar parado em 'Baixando' por varios minutos sem mostrar nada na tela. E um download comecado numa versao antiga continua na versao nova exatamente de onde parou, sem quebrar o vinculo entre o arquivo parcial e o progresso salvo. A lista de downloads agora e gravada em DOIS lugares: na pasta principal e uma copia de seguranca em outra pasta do Windows. Se a pasta principal for apagada por engano, por um antivirus ou por uma limpeza de disco, a lista volta sozinha ao abrir o programa, com o progresso de cada download intacto.",
       "sha256": "70A139DBB642C96DC2DBD08241DB2D379B598FA5F4B0133EA4D26804F92E048C",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.0/DownloadManager.exe"
+    },
+    {
+      "version": "1.4.1",
+      "notes": "Nova versao: se uma conexao parar de mandar dados no meio do download - como acontece numa queda de energia, quando o servidor simplesmente esquece a conexao - o programa nao fica mais travado para sempre em 'Baixando' a 0 B/s. Depois de 45 segundos sem receber NENHUM byte, a conexao e considerada morta, abandonada, e o download continua de onde parou com uma conexao nova (nova requisicao de trecho, sem perder nada do que ja chegou). E, num link temporario (assinado) cujo servidor saiu do ar: depois de 8 falhas seguidas numa parte, aparece um erro claro na tela pedindo um link novo ou para tentar de novo, em vez do programa tentar para sempre em silencio. As mensagens de erro agora mostram a causa real do problema em vez do erro generico do sistema.",
+      "sha256": "4EE40A81922DE8F6B7BC55308C10A5A66C170839A7E94C011060DFD7FD416126",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.1/DownloadManager.exe"
     }
   ]
 }
