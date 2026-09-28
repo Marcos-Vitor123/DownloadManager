@@ -1,8 +1,8 @@
 {
-"version": "1.3.7",
-  "notes": "Fechamento agora encerra o processo de verdade ao clicar no X: saia qualquer janela restante e nenhum processo do DownloadManager fica rodando (era relatado que o programa continuava aberto mesmo depois de fechar).",
-  "sha256": "696E31E80854ED2E87261C8574526FD5A7360537D741BF70B74FCFB20883C186",
-  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe",
+  "version": "1.3.8",
+  "notes": "Corrige o travamento em downloads grandes. Antes o programa ficava preso em velocidade quase zero e o download em andamento sumia da lista ao reabrir o programa. Link temporario/assinado (?sig=) deixa de ser tratado como conexao unica: uma sonda de 1 byte descobre tamanho, nome real e suporte a Range antes do primeiro byte, entao o download ja comeca com 256 partes. O arquivo final passa a ser esparsado: o Windows so reserva o espaco ja baixado, em vez de reservar os 161 GB de uma vez. As conexoes sobem aos poucos (8 no inicio, +1 a cada 0,9 s) em vez de 256 de uma vez. CORRECAO: o progresso passou a ser gravado de verdade (antes nenhuma gravacao dava certo e o download nao voltava para a lista ao reiniciar) - agora e salvo no fechamento, a cada 3 segundos e a cada parte concluida, e so depois de gravar no disco, para a retomada nunca comecar de um ponto que ainda nao existe no arquivo. A quantidade de partes continua seguindo sua configuracao: 32, 64, 128 ou 256.",
+  "sha256": "f9d15c5078525548b2e6a6067fac667e0cc8a461411b7ab6372c3274117fe33c",
+  "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.8/DownloadManager.exe",
   "versions": [
     {
       "version": "1.0.0",
@@ -24,7 +24,7 @@
     },
     {
       "version": "1.2.1",
-      "notes": "Correcao de desempenho: o painel de partes agora e virtualizado — ao expandir um download para acompanhar as partes baixando, o programa desenha apenas as partes visiveis (antes criava as 256 de uma vez, o que causava a trava ao clicar). O progresso das partes e atualizado 1 vez por segundo, mantendo a fluidez sem pesar na interface.",
+      "notes": "Correcao de desempenho: o painel de partes agora e virtualizado ÔÇö ao expandir um download para acompanhar as partes baixando, o programa desenha apenas as partes visiveis (antes criava as 256 de uma vez, o que causava a trava ao clicar). O progresso das partes e atualizado 1 vez por segundo, mantendo a fluidez sem pesar na interface.",
       "sha256": "fa0f7b815236ab380c7519b4ab8e7a951b84388ac57debd16d08c6ad2a71f9e4",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.2.1/DownloadManager.exe"
     },
@@ -105,6 +105,12 @@
       "notes": "Fechamento encerra o processo de verdade ao clicar no X (antes ficava processo em segundo plano).",
       "sha256": "696E31E80854ED2E87261C8574526FD5A7360537D741BF70B74FCFB20883C186",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.7/DownloadManager.exe"
+    },
+    {
+      "version": "1.3.8",
+      "notes": "Corrige o travamento em downloads grandes. Antes o programa ficava preso em velocidade quase zero e o download em andamento sumia da lista ao reabrir o programa. Link temporario/assinado (?sig=) deixa de ser tratado como conexao unica: uma sonda de 1 byte descobre tamanho, nome real e suporte a Range antes do primeiro byte, entao o download ja comeca com 256 partes. O arquivo final passa a ser esparsado: o Windows so reserva o espaco ja baixado, em vez de reservar os 161 GB de uma vez. As conexoes sobem aos poucos (8 no inicio, +1 a cada 0,9 s) em vez de 256 de uma vez. CORRECAO: o progresso passou a ser gravado de verdade (antes nenhuma gravacao dava certo e o download nao voltava para a lista ao reiniciar) - agora e salvo no fechamento, a cada 3 segundos e a cada parte concluida, e so depois de gravar no disco, para a retomada nunca comecar de um ponto que ainda nao existe no arquivo. A quantidade de partes continua seguindo sua configuracao: 32, 64, 128 ou 256.",
+      "sha256": "f9d15c5078525548b2e6a6067fac667e0cc8a461411b7ab6372c3274117fe33c",
+      "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.3.8/DownloadManager.exe"
     }
   ]
 }
