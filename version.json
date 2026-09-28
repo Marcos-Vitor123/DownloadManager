@@ -1,7 +1,7 @@
 {
   "version": "1.4.2",
   "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
-  "sha256": "964811CE933521261D90AB2AD8E877E74B27192FC289FD8E8D6A6278D1BADCDD",
+  "sha256": "3639245FA4CA961A8957EF6F68D5A89D8396245F4C0DBFEAA01A039B653E64F8",
   "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe",
   "versions": [
     {
@@ -133,7 +133,7 @@
     {
       "version": "1.4.2",
       "notes": "Nova versao: o 'parou do nada' em link temporario (uso unico, tipo dlproxy) - download que fica 'Baixando' a 0 B/s para sempre - agora e detectado e avisado. Se o link de uso unico nao andar nada (menos de 64 MB em 5 minutos), o programa para com o erro claro 'O servidor do link temporario parou de responder varias vezes - gere um link novo, ou tente de novo' em vez de ficar em silencio para sempre. E um maximo de 32 conexoes simultaneas em links de uso unico: abrir 256 conexoes TLS de uma vez entope o tunel (dlproxy) e derruba a velocidade para ~0 B/s; com no maximo 32 o download continua paralelo e estavel. Fechar o programa (X) e abrir de novo continua no ponto exato.",
-      "sha256": "964811CE933521261D90AB2AD8E877E74B27192FC289FD8E8D6A6278D1BADCDD",
+      "sha256": "3639245FA4CA961A8957EF6F68D5A89D8396245F4C0DBFEAA01A039B653E64F8",
       "exeUrl": "https://github.com/Marcos-Vitor123/DownloadManager/releases/download/v1.4.2/DownloadManager.exe"
     }
   ]
